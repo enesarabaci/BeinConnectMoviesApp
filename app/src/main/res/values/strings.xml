@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BeinConnectMoviesApp</string>
+    <string name="movie_title">FİLM</string>
+    <string name="search_title">ARAMA</string>
+    <string name="search_movie">Film ara</string>
+    <string name="popularity">Popülerlik</string>
+    <string name="release_date">Yapım Yılı</string>
+    <string name="vote_average">IMDB</string>
+    <string name="load_state_footer_error_message">Sonuçlar Yüklenemedi</string>
+    <string name="retry">Tekrar Dene</string>
+</resources>

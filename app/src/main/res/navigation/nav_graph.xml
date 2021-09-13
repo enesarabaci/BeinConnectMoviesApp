@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/moviesFragment">
+
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.example.beinconnectmoviesapp.View.MoviesFragment"
+        android:label="MoviesFragment" >
+        <action
+            android:id="@+id/action_moviesFragment_to_genresFragment"
+            app:destination="@id/genresFragment" />
+        <action
+            android:id="@+id/action_moviesFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genresFragment"
+        android:name="com.example.beinconnectmoviesapp.View.GenresFragment"
+        android:label="GenresFragment" >
+        <argument
+            android:name="genreId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_genresFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.beinconnectmoviesapp.View.SearchFragment"
+        android:label="SearchFragment" />
+    <action
+        android:id="@+id/action_global_searchFragment"
+        app:destination="@id/searchFragment"
+        app:launchSingleTop="true" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.beinconnectmoviesapp.View.CategoryFragment"
+        android:label="CategoryFragment" >
+        <argument
+            android:name="categoryTitle"
+            app:argType="string" />
+        <argument
+            android:name="secondCategoryTitle"
+            app:argType="com.example.beinconnectmoviesapp.Model.GenreX"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>

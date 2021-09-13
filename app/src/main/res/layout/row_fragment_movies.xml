@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/row_fragment_movies_root"
+    android:layout_width="130dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripple_effect">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="20dp"
+        app:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/row_fragment_movies_image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/dark"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/row_fragment_movies_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/dark"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:text="Karayip Korsanları"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
